@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  /* background-image: linear-gradient(135deg, #06032e 4%, #1e1d61 100%); */
 }
 .ubuntu{
   font-family:
@@ -18,10 +19,20 @@ color: fuchsia;
   border-bottom:2px solid fuchsia !important ;
   color:fuchsia !important
 }
+strong{
+  color: fuchsia
+}
+span{
+  color:yellowgreen !important
+}
 .row{
   border: 1px solid black;
 }
 div{
   border: 1px solid red;
 }
-
+.container.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Este es opcional, ajusta el alineamiento como prefieras */
+}

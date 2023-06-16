@@ -7,3 +7,8 @@ padding: 10px 15px;
 input:focus{
     outline: none;
 }
+@media(max-width:576px){
+    .input{
+        width: 50% !important;
+    }
+}

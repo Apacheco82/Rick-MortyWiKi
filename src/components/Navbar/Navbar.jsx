@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link to="/" className="fs-3 ubuntu navbar-brand">
           <strong>
             {" "}
-            Rick & Morty <span className="text-primary">WiKi</span>
+            Rick & Morty <span>WiKi</span>
           </strong>
         </Link>
         <button
