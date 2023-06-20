@@ -1,0 +1,14 @@
+.navbar {
+    position: fixed top !important; 
+    top: 0; 
+    width: 100%; 
+    z-index: 2; 
+    background: linear-gradient(135deg, #06032e 4%, #1e1d61 100%);
+
+  }
+.nav-link{
+    color: yellowgreen
+}
+.nav-link:hover{
+    color: fuchsia
+}

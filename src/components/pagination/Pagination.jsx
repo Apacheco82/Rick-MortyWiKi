@@ -1,5 +1,6 @@
 import React from "react"
 import ReactPaginate from "react-paginate"
+import "./pagination.css"
 
 const Pagination = ({ info, pageNumber, setPageNumber }) => {
   const handlePageChange = (data) => {
@@ -19,7 +20,8 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
         pageLinkClassName="page-link"
         onPageChange={handlePageChange}
         forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
-        // breakLabel={"..."}
+        pageRangeDisplayed={5}
+        marginPagesDisplayed={1}
       />
     </div>
   )

@@ -33,14 +33,34 @@ const Cards = ({ results }) => {
                       </div>
                     </div>
                     <div className="card-back">
-                      <div className="text-fluid fs-4">Origin</div>
-                      <div className="text-fluid fs-4">{origin.name}</div>
-                      <div className="text-fluid fs-5">Last location</div>
-                      <div className="text-fluid fs-4">{location.name}</div>
-                      <div className="text-fluid fs-4">Gender</div>
-                      <div className="text-fluid fs-4">{gender}</div>
-                      <div className="text-fluid fs-4">Species</div>
-                      <div className="text-fluid fs-4">{species}</div>
+                      {" "}
+                      <div className="text-center m-1">
+                        <strong>
+                          <div className="text-fluid">Origin</div>
+                        </strong>
+                        <div className="text-fluid">{origin.name}</div>
+                      </div>
+                      <div className="text-center m-1">
+                        <strong>
+                          {" "}
+                          <div className="text-fluid">Last location</div>
+                        </strong>
+                        <div className="text-fluid">{location.name}</div>
+                      </div>
+                      <div className="text-center m-1">
+                        <strong>
+                          {" "}
+                          <div className="text-fluid">Species</div>
+                        </strong>
+                        <div className="text-fluid">{species}</div>
+                      </div>
+                      <div className="text-center m-1">
+                        <strong>
+                          {" "}
+                          <div className="text-fluid">Gender</div>
+                        </strong>
+                        <div className="text-fluid">{gender}</div>
+                      </div>
                     </div>
                   </div>
                 </div>

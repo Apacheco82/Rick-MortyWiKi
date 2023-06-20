@@ -3,7 +3,7 @@ import Filters from "../components/filters/Filters"
 import Cards from "../components/cards/Cards.jsx"
 import Pagination from "../components/pagination/Pagination.jsx"
 import Search from "../components/search/Search.jsx"
-import { URL } from "../services"
+import { fetchHome } from "../services"
 
 const Home = () => {
   const [pageNumber, setPageNumber] = useState(1)
@@ -12,28 +12,24 @@ const Home = () => {
   const [status, setStatus] = useState("")
   const [gender, setGender] = useState("")
   const [species, setSpecies] = useState("")
-
   const { info, results } = data
 
-  let api = `${URL}/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`
-
-  const fetchData = async (api) => {
+  const api = async () => {
     try {
-      const response = await fetch(api)
-      const data = await response.json()
-      setData(data)
+      const info = await fetchHome(pageNumber, search, status, gender, species)
+      setData(info)
     } catch (error) {
-      console.error("Error fetching data: ", error)
-      //actualizar el estado de tu componente para manejar el error
+      console.log(error)
+      //actualizar el estado del componente para manejar el error
     }
   }
 
   useEffect(() => {
-    fetchData(api)
-  }, [api])
+    api()
+  }, [pageNumber, search, status, gender, species])
 
   return (
-    <div>
+    <div className="container-home">
       <h1 className="text-center ubuntu my-4">
         <strong> Characters</strong>
       </h1>

@@ -2,3 +2,38 @@
   cursor: pointer;
   color: yellowgreen;
 }
+.accordion-item {
+  color: yellowgreen !important;
+  background: linear-gradient(135deg, #06032e 4%, #1e1d61 100%);
+}
+.text-fuchsia{
+  color: fuchsia;
+  font-size: 20px;
+}
+.accordion-button {
+  background: linear-gradient(135deg, #06032e 4%, #1e1d61 100%);
+  color: yellowgreen;
+}
+accordion-button:hover{
+  color: yellowgreen !important;
+}
+.accordion-button:focus {
+  color: yellowgreen !important;
+  background-color: fuchsia !important;
+  box-shadow: none !important; /* Esta línea eliminará el halo azul */
+}
+
+.accordion-button:active {
+  color: yellowgreen !important;
+  background-color: fuchsia !important;
+  box-shadow: none !important; /* Esta línea eliminará el halo azul */
+}
+
+.btn-outline-warning {
+  color: fuchsia; /* Cambia el color del texto a fuchsia */
+  border-color: fuchsia; /* Cambia el color del borde a fuchsia */
+}
+.btn-outline-warning:hover {
+  background-color: fuchsia; /* Cambia el color de fondo a fuchsia cuando se pasa el mouse sobre el botón */
+  color: yellowgreen; /* Cambia el color del texto a verde cuando se pasa el mouse sobre el botón */
+}

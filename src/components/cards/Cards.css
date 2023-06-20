@@ -1,9 +1,11 @@
 .card {
   width: 100%;
-   height: 300px; 
+  height: 300px; 
   perspective: 1000px;
   border-radius: 10px;
   overflow: hidden;
+  background-color: #00000000;
+  border-color: yellowgreen;
 }
 
 .card-inner {
@@ -18,8 +20,9 @@
   transform: rotateY(180deg);
 }
 .card-front {
-  position: relative; /* Asegura que el contenido dentro de .card-front se posicione correctamente */
+  position: relative;
   color: yellowgreen;
+
 }
 
 .card-front .name {
@@ -45,6 +48,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .card-front {
@@ -54,6 +58,7 @@
 .card-back {
   color: yellowgreen;
   transform: rotateY(180deg);
+  background-color: rgba(255, 0, 255, 0.5)
 }
 
 .card-front img {
@@ -66,6 +71,7 @@
   top: 10px;
   right: 20px;
   font-size: 17px;
+  box-shadow: 10px 10px 14px -11px rgba(0,0,0,0.75);
 }
 
 .text-fluid {
@@ -74,4 +80,9 @@
   white-space: nowrap;
 }
 
- /* falta propiedades border en las cards */
+.card-details{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+}

@@ -1,10 +1,11 @@
 import React from "react"
 import { NavLink, Link } from "react-router-dom"
+import "./navbar.css"
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+      <div className="container w-100">
         <Link to="/" className="fs-3 ubuntu navbar-brand">
           <strong>
             {" "}

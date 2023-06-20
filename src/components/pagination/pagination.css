@@ -1,0 +1,5 @@
+.my-pagination li:nth-last-child(2),
+.my-pagination li:nth-last-child(3),
+.my-pagination li:nth-last-child(4) {
+  display: none;
+}

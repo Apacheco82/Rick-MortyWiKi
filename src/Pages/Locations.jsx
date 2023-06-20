@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { URL } from "../services"
+import { fetchData } from "../services"
 import Cards from "../components/cards/Cards.jsx"
 import InputGroup from "../components/filters/category/InputGroup"
 
@@ -9,33 +9,29 @@ const Locations = () => {
   const [results, setResults] = useState([])
   const { name, type, dimension } = data
 
-  let api = `${URL}/location/${id}`
-
-  const fetchData = async (api) => {
+  const api = async () => {
     try {
-      const response = await fetch(api);
-      const data = await response.json();
-      setData(data);
-
+      const response = await fetchData("location", id)
+      setData(response)
       const residents = await Promise.all(
-        data.residents.map(async (url) => {
-          const response = await fetch(url);
-          return await response.json();
+        response.residents.map(async (url) => {
+          const res = await fetch(url)
+          return await res.json()
         })
-      );
-      setResults(residents);
+      )
+      setResults(residents)
     } catch (error) {
-      console.error('Error fetching data: ', error);
+      console.error("Error fetching data: ", error)
       //actualizar el estado de tu componente para manejar el error
     }
-  };
+  }
 
   useEffect(() => {
-    fetchData(api);
-  }, [api]);
+    api()
+  }, [results])
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row mb-4">
         <h1 className="text-center mb-4 my-4 ubuntu">
           <strong> Location: </strong>{" "}
@@ -51,8 +47,8 @@ const Locations = () => {
         </h5>
       </div>
       <div className="row">
-      <div className="col-lg-3 col-12 ">
-          <h4 className="text-center mb-4">Pick Locations</h4>
+        <div className="col-lg-3 col-12 ">
+          <h4 className="text-center mb-4"><strong>Pick Locations</strong></h4>
           <InputGroup name="Locations" setId={setId} total={126} />
         </div>
         <div className="col-lg-8 col-12">
