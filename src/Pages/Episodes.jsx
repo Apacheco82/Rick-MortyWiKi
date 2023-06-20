@@ -1,34 +1,38 @@
 import React, { useEffect, useState } from "react"
-import {fetchData } from "../services"
+import { fetchData, fetchType } from "../services"
 import Cards from "../components/cards/Cards.jsx"
-import InputGroup from "../components/filters/category/InputGroup";
+import InputGroup from "../components/filters/category/InputGroup"
 
 const Episodes = () => {
   const [id, setId] = useState(1)
   const [data, setData] = useState([])
   const [results, setResults] = useState([])
+  const [episode, setEpisode] = useState([])
   const { air_date, name } = data
 
   const api = async () => {
     try {
       const response = await fetchData("episode", id)
       setData(response)
+      console.log(data)
       const characters = await Promise.all(
         response.characters.map(async (url) => {
-          const res = await fetch(url);
-          return await res.json();
+          const res = await fetch(url)
+          return await res.json()
         })
-      );
-      setResults(characters);
+      )
+      setResults(characters)
+      const episodes = await fetchData("episode", id)
+
     } catch (error) {
-      console.error('Error fetching data: ', error);
+      console.error("Error fetching data: ", error)
       //actualizar el estado de tu componente para manejar el error
     }
-  };
+  }
 
   useEffect(() => {
-    api();
-  }, [results]);
+    api()
+  }, [results])
 
   return (
     <div className="container mt-5">
@@ -44,8 +48,10 @@ const Episodes = () => {
       </div>
       <div className="row">
         <div className="col-lg-3 col-12 ">
-          <h4 className="text-center mb-4"><strong>Pick Episodes</strong></h4>
-          <InputGroup name="Episode" setId={setId} total={51} />
+          <h4 className="text-center mb-4">
+            <strong>Pick Episodes</strong>
+          </h4>
+          <InputGroup name="Episode"setId={setId} total={51} />
         </div>
         <div className="col-lg-8 col-12">
           <div className="row">

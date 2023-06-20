@@ -4,7 +4,7 @@ import "./Cards.css"
 
 const Cards = ({ results }) => {
   const display = results
-    ? results.map((res) => {
+    ? results.map((res, key) => {
         const { id, name, image, location, status, gender, origin, species } =
           res
         let classStatus
@@ -18,7 +18,7 @@ const Cards = ({ results }) => {
         }
 
         return (
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative">
+          <div key= {key }className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative">
             <div className="container align-items-center">
               <Link to={`/${id}`}>
                 <div className="card">

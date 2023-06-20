@@ -49,7 +49,7 @@ const Locations = () => {
       <div className="row">
         <div className="col-lg-3 col-12 ">
           <h4 className="text-center mb-4"><strong>Pick Locations</strong></h4>
-          <InputGroup name="Locations" setId={setId} total={126} />
+          <InputGroup name="Location" setId={setId} total={126} />
         </div>
         <div className="col-lg-8 col-12">
           <div className="row">
