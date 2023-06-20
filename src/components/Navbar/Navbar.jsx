@@ -13,7 +13,7 @@ const Navbar = () => {
           </strong>
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler myToggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"

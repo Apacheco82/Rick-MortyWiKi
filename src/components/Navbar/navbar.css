@@ -1,14 +1,30 @@
 .navbar {
-    position: fixed top !important; 
-    top: 0; 
-    width: 100%; 
-    z-index: 2; 
-    background: linear-gradient(135deg, #06032e 4%, #1e1d61 100%);
-
-  }
-.nav-link{
-    color: yellowgreen
+  position: sticky top !important;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(135deg, #06032e 4%, #1e1d61 100%);
 }
-.nav-link:hover{
-    color: fuchsia
+.nav-link {
+  color: yellowgreen !important;
+}
+.nav-link:hover {
+  color: fuchsia;
+}
+.myToggler {
+  /* Tus estilos aquí */
+  background-color: fuchsia;
+  color: white;
+}
+
+.myToggler:hover {
+  background-color: yellowgreen;
+  color: fuchsia;
+}
+
+.myToggler:active,
+.myToggler:focus {
+  background-color: yellowgreen;
+  color: fuchsia;
+  box-shadow: none;
 }

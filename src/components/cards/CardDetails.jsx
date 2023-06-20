@@ -23,9 +23,9 @@ const CardDetails = ({ results }) => {
   }, [])
 
   return (
-    <div className="container d-flex justify-content-center mb-5">
+    <div className="container d-flex justify-content-center mt-5">
       <div className="d-flex flex-column">
-        <h1 className="text-center">
+        <h1 className="text-center mb-5">
           <strong>{name}</strong>
         </h1>
         <div className="container d-flex flex-column">

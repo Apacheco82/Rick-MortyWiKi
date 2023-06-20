@@ -29,10 +29,13 @@ const Home = () => {
   }, [pageNumber, search, status, gender, species])
 
   return (
-    <div className="container-home">
-      <h1 className="text-center ubuntu my-4">
-        <strong> Characters</strong>
-      </h1>
+    <div className="container mt-5">
+      <div className="row mt-5">
+        {" "}
+        <h1 className="text-center ubuntu mt-5 mb-3">
+          <strong> Characters</strong>
+        </h1>
+      </div>
 
       <Search setSearch={setSearch} setPageNumber={setPageNumber} />
 

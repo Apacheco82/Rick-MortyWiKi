@@ -1,5 +1,58 @@
-.my-pagination li:nth-last-child(2),
-.my-pagination li:nth-last-child(3),
-.my-pagination li:nth-last-child(4) {
-  display: none;
+/* Estilo para los botones Prev y Next */
+.btn-warning {
+  background-color: fuchsia;
+  color: white;
+  border-color: fuchsia;
+}
+
+.btn-warning:hover {
+  background-color: yellowgreen;
+  color: fuchsia;
+}
+
+.btn-warning:active,
+.btn-warning:focus {
+  background-color: fuchsia;
+  color: yellowgreen;
+  box-shadow: none;
+}
+
+/* Estilo para los botones de los números de página */
+.page-link {
+  border-radius: 5px;
+  background-color: yellowgreen;
+  color: fuchsia;
+}
+
+.page-link:hover {
+  background-color: fuchsia;
+  color: yellowgreen;
+}
+
+.page-link:active,
+.page-link:focus {
+  background-color:yellowgreen;
+  color: fuchsia !important;
+  box-shadow: none;
+}
+
+/* Estilo para la página seleccionada */
+.page-item.selected .page-link {
+  background-color: fuchsia !important;
+  color: yellowgreen !important;
+}
+
+a {
+  text-decoration: none;
+  color: mintcream;
+}
+@media (max-width: 600px) {
+  .page-link {
+    font-size: 0.75rem; /* Reduce el tamaño de la fuente */
+    padding: 0.25rem 0.5rem; /* Reduce el padding */
+  }
+  .btn-warning {
+    font-size: 0.75rem; /* Reduce el tamaño de la fuente */
+    padding: 0.25rem 0.5rem; /* Reduce el padding */
+  }
 }

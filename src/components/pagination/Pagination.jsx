@@ -11,7 +11,7 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
     
     <div className="container my-5 col-lg-8 col-12 align-items-center justify-content-center">
       <ReactPaginate
-        className="pagination justify-content-center gap-4 "
+        className="pagination text-fluid justify-content-center gap-1 "
         pageCount={info?.pages}
         previousLabel="Prev"
         previousClassName="btn btn-warning"

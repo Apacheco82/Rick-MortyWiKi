@@ -3,6 +3,7 @@
   color: yellowgreen;
 }
 .accordion-item {
+  border-color: yellowgreen;
   color: yellowgreen !important;
   background: linear-gradient(135deg, #06032e 4%, #1e1d61 100%);
 }
@@ -12,7 +13,7 @@
 }
 .accordion-button {
   background: linear-gradient(135deg, #06032e 4%, #1e1d61 100%);
-  color: yellowgreen;
+  color: yellowgreen !important;
 }
 accordion-button:hover{
   color: yellowgreen !important;
